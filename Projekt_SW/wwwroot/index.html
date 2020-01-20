@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ATM</title>
+</head>
+<body>
+    <h1>WSB</h1>
+    <h2>ATM Machine</h2>
+    <h3 id="userName"></h3>
+    <div id="errorLog" style="color: #FF0000;">Błąd logowania</div>
+    <form id="formLogin" action="javascript:void(0);" method="GET" onsubmit="getOneItem()">
+        <input type="text" id="id" placeholder="Numer karty">
+        <input type="text" id="pin" placeholder="Pin">
+        <input type="submit" value="Logowanie">
+    </form>
+
+    <div id="mainContentButton">
+        <button onclick="pushMoney()" style="clear:both; margin-left: 20px;">Wpłata</button>
+        <button onclick="pullMoney()" style="float: left;">Wypłata</button>
+        <button onclick="showMoney()" style="float: left;margin-left: 20px;">Stan konta</button>
+        <button onclick="changePin()" style="clear:both; margin-left: 20px;">Zmiana pinu</button>
+    </div>
+    <div id="boxContentInputShowMoney">
+        <input id="contentInputShowMoney" type="text" />
+    </div>
+
+    <div id="boxContentInputPullMoney">
+        <input id="contentInputPullMoney" type="text" />
+        <button id="buttonPullMoney" onclick="buttonPullMoney()">Wypłata</button>
+    </div>
+
+    <div id="boxContentInputPushMoney">
+        <input id="contentInputPushMoney" type="text" />
+        <button id="buttonPushMoney" onclick="buttonPushMoney()">Wypłata</button>
+        <p id="noMoney" style="color: #FF0000;">Brak środków!</p>
+    </div>
+
+    <div id="boxContentInputChangePin">
+        <input id="contentInputChangePin" type="text" />
+        <button id="buttonChangePin" onclick="buttonChangePin()">Zmiana Pinu</button>
+    </div>
+
+    <script src="js.js" asp-append-version="true"></script>
+</body>
+</html>
